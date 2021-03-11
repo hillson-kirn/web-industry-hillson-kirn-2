@@ -6,29 +6,73 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-<div class="w3-container">
-  <h1>Web Design and Developer Job Overview</h1>
+  <style>
+    body {
+      background-color: lightgrey;
+    }
+    </style>
 
-  <div class="w3-padding w3-xlarge w3-teal">
-   <link rel="home"> <i class="fa fa-home" style="font-size:36px;"></i> </link>
-    <link rel="people"><i class="fa fa-users" style="font-size:36px"></i></link>
-    <button class="w3-btn w3-indigo w3-small" rel="pay"><i class="fa fa-money" style="font-size:36px"></i></button>
-   <link rel="info"> <i class="fa fa-question" style="font-size:36px"></i></link>
+  <!DOCTYPE html>
+  <html>
+  <title>W3.CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <body>
+  
+    <div class="w3-container">
+      <h1>Web Design and Developer Job Overview</h1>
+  
+  <div class="w3-bar w3-indigo">
+    <button class="w3-bar-item w3-indigo w3-button" onclick="openCity('Home')">
+      <link rel="home"> <i class="fa fa-home" style="font-size:36px;"></i> </link>
+    </button>
+    <button class="w3-bar-item w3-indigo w3-button" onclick="openCity('JobOverview')">
+      <link rel="people"><i class="fa fa-users" style="font-size:36px"></i></link>
+    </button>
+    <button class="w3-bar-item w3-indigo w3-button" onclick="openCity('Money')">
+      <link rel="home"> <i class="fa fa-money" style="font-size:36px;"></i> </link>
+    </button>
+    <button class="w3-bar-item w3-indigo w3-button" onclick="openCity('Questions')">
+      <link rel="info"> <i class="fa fa-question" style="font-size:36px"></i></link>
+    </button>
+  </div>
+  
+  <div id="Home" class="w3-container city">
+    <h2>Home</h2>
+    <p>Home page</p>
+  </div>
+  
+  <div id="JobOverview" class="w3-container city" style="display:none">
+    <h2>Job Overview</h2>
+    <p>Job Overview page</p> 
+  </div>
+  
+  <div id="Money" class="w3-container city" style="display:none">
+    <h2>Money</h2>
+    <p>Money Page</p>
   </div>
 
+  <div id="Questions" class="w3-container city" style="display:none">
+    <h2>Questions</h2>
+    <p>Questions page</p>
+  </div>
+  
+  <script>
+  function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+  }
+  </script>
+  
+  </body>
+  </html>
+<!--
   <p><button class="w3-btn w3-orange w3-xlarge">Home<i class="w3-margin-left fa fa-home"></i></button></p>
+-->
 </div>
-<h1 id="#home">Home</h1>
-<h1 id="#people">About Web Developers</h1>
-<p>fbfhfbhfbueabfehrubf
-  uehbafuewybuywewfuyfbaeywubewuyfbewuyfb
-  uewyfbwuyfbewyfbuewy
-  fbewuyfbwue
-  yfbewuyfbewuyf
-  bhdbfhdsbfhsjdbf
-  dsjhbfhuebwuyfbwuhseafbjusydjhbcueyajhsdbc</p>
-<h1 id="#pay" >Pay and Job Outlook</h1>
-<p></p>
-<h1 id="#info" >More Information</h1>
 </body>
 </html> 
